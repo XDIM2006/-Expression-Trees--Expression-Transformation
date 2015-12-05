@@ -1,0 +1,7 @@
+D:\mentoring\Expressions and IQueryable\Samples\Sample01\bin\Debug\Sample01.dll
+D:\mentoring\Expressions and IQueryable\Samples\Sample01\bin\Debug\Sample01.pdb
+D:\mentoring\Expressions and IQueryable\Samples\Sample01\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+D:\mentoring\Expressions and IQueryable\Samples\Sample01\bin\Debug\ru\Microsoft.VisualStudio.QualityTools.UnitTestFramework.resources.dll
+D:\mentoring\Expressions and IQueryable\Samples\Sample01\obj\Debug\Sample01.csprojResolveAssemblyReference.cache
+D:\mentoring\Expressions and IQueryable\Samples\Sample01\obj\Debug\Sample01.dll
+D:\mentoring\Expressions and IQueryable\Samples\Sample01\obj\Debug\Sample01.pdb
