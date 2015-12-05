@@ -54,24 +54,27 @@ namespace Sample02
                 }
                 if (node.Right.NodeType == ExpressionType.Parameter || node.Left.NodeType == ExpressionType.Parameter)
                 {
-                     var newNode = Expression.MakeBinary(node.NodeType,
-                            (node.Right.NodeType == ExpressionType.Parameter)?
-                            replaceParameter(node.Right) : node.Right,
-                            (node.Left.NodeType == ExpressionType.Parameter) ?
-                            replaceParameter(node.Left) : node.Left);
-    
-                        return base.Visit(newNode);                    
+                    var newLeft = replaceParameter(node.Left);
+                    var newRight = replaceParameter(node.Right);
+                    if (newLeft != node.Left || newRight != node.Right)
+                    {
+                        var newNode = Expression.MakeBinary(node.NodeType, newRight, newLeft);
+                        return base.VisitBinary(newNode);
+                    }                  
                 }
 
                 return base.VisitBinary(node);
             }
             public Expression replaceParameter(Expression parameter)
             {
-                var par = parameter as ParameterExpression;
-                var val = replacers[par.Name];
-                if (val != 0)
+                if (replacers != null)
                 {
-                    return Expression.Constant(val);
+                    var par = parameter as ParameterExpression;
+                    var val = replacers[par.Name];
+                    if (val != 0)
+                    {
+                        return Expression.Constant(val);
+                    }
                 }
                 return parameter;
             }
@@ -88,11 +91,11 @@ namespace Sample02
             Console.WriteLine("{0} : ", changed.Compile().Invoke(3));
             Console.WriteLine("{0} : ", exp1.Compile().Invoke(3));    
 
-            Expression<Func<int, int, int>> replace = (a, b) => b * a +3;
+            Expression<Func<int, int, int>> replace = (a, b) => b * a +5;
             Console.WriteLine("{0} : ", replace.Compile().Invoke(3,3));
 
             var dict = new Dictionary<string, int>();
-            dict.Add("a", 5); dict.Add("b", 5);
+            dict.Add("a", 5); dict.Add("b", 4);
 
             Expression<Func<int, int, int>> replaced = 
                 (Expression<Func<int, int, int>>)new TraceExpressionVisitor().Visit(replace, dict);

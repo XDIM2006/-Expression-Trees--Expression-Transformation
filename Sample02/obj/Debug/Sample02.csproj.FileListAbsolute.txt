@@ -3,3 +3,7 @@ D:\mentoring\Expressions and IQueryable\Samples\Sample02\bin\Debug\Sample02.pdb
 D:\mentoring\Expressions and IQueryable\Samples\Sample02\obj\Debug\Sample02.csprojResolveAssemblyReference.cache
 D:\mentoring\Expressions and IQueryable\Samples\Sample02\obj\Debug\Sample02.dll
 D:\mentoring\Expressions and IQueryable\Samples\Sample02\obj\Debug\Sample02.pdb
+D:\mentoring\Expressions and IQueryable\Samples\-Expression-Trees--Expression-Transformation\Sample02\bin\Debug\Sample02.dll
+D:\mentoring\Expressions and IQueryable\Samples\-Expression-Trees--Expression-Transformation\Sample02\bin\Debug\Sample02.pdb
+D:\mentoring\Expressions and IQueryable\Samples\-Expression-Trees--Expression-Transformation\Sample02\obj\Debug\Sample02.dll
+D:\mentoring\Expressions and IQueryable\Samples\-Expression-Trees--Expression-Transformation\Sample02\obj\Debug\Sample02.pdb
